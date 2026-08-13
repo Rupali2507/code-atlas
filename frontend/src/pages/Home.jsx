@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 const Home = () => {
   return (
     <div className="min-h-screen bg-[#0b1c30] text-white">
-
+     <Navbar/>
       {/* Hero Section */}
       <section className="relative overflow-hidden">
 
@@ -292,6 +294,7 @@ const Home = () => {
         </div>
 
       </section>
+      <Footer/>
 
     </div>
   )
