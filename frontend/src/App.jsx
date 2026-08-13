@@ -1,11 +1,17 @@
-import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Home from './pages/Home'
+import Footer from './components/Footer'
 
-function App() {
+const App = () => {
   return (
-    <div className="min-h-screen bg-gray-950 flex items-center justify-center">
-      <h1 className="text-4xl font-bold text-white">
-        CodeAtlas
-      </h1>
+    <div className="min-h-screen bg-[#0b1c30]">
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+      <Footer/>
     </div>
   )
 }
