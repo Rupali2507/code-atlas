@@ -24,7 +24,10 @@ const Register = () => {
 
   const handleSubmit = (e) => {
         e.preventDefault()
-
+        if(formData.name == null || formData.email==null || formData.password==null || formData.confirmPassword==null){
+          toast.error('All fields are required')
+          return
+        }
         if (formData.password !== formData.confirmPassword) {
             toast.error('Passwords do not match')
             return
@@ -40,7 +43,7 @@ const Register = () => {
    
 
   return (
-    <div className="flex h-screen flex-col overflow-hidden bg-[#0b1c30] text-white">
+    <div className="flex h-screen flex-col overflow-hidden bg-[#03070d] text-white">
 
       {/* Navbar */}
       <Navbar />
@@ -51,14 +54,14 @@ const Register = () => {
         <div className="grid h-full lg:grid-cols-2">
 
           {/* Left Section */}
-          <div className="hidden border-r border-slate-700/50 p-10 lg:flex lg:flex-col">
+          <div className="hidden border-r border-slate-700/50 p-10 lg:flex lg:flex-col lg:items-center">
 
             {/* Center Content */}
             <div className="flex flex-1 items-center">
 
               <div className="max-w-lg">
 
-                <p className="mb-5 text-sm font-medium text-indigo-400">
+                <p className="mb-5 text-md font-medium text-indigo-400">
                   YOUR CODEBASE, IN CONTEXT
                 </p>
 
@@ -138,7 +141,7 @@ const Register = () => {
                     onChange={handleChange}
                     placeholder="Your name"
                     required
-                    className="w-full rounded-lg border border-slate-700 bg-[#081728] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400"
+                    className="w-full rounded-lg border border-slate-700  px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400"
                   />
 
                 </div>
@@ -162,7 +165,7 @@ const Register = () => {
                     onChange={handleChange}
                     placeholder="you@example.com"
                     required
-                    className="w-full rounded-lg border border-slate-700 bg-[#081728] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400"
+                    className="w-full rounded-lg border border-slate-700  px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400"
                   />
 
                 </div>
@@ -186,7 +189,7 @@ const Register = () => {
                     onChange={handleChange}
                     placeholder="Create a password"
                     required
-                    className="w-full rounded-lg border border-slate-700 bg-[#081728] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400"
+                    className="w-full rounded-lg border border-slate-700  px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400"
                   />
 
                 </div>
@@ -210,7 +213,7 @@ const Register = () => {
                     onChange={handleChange}
                     placeholder="Confirm your password"
                     required
-                    className="w-full rounded-lg border border-slate-700 bg-[#081728] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400"
+                    className="w-full rounded-lg border border-slate-700  px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400"
                   />
 
                 </div>
@@ -219,7 +222,7 @@ const Register = () => {
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="mt-2 w-full rounded-lg bg-indigo-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-indigo-600"
+                  className="mt-2 w-full rounded-lg bg-white px-4 py-3 text-sm font-semibold text-black transition hover:bg-gray-200"
                 >
                   Create account
                 </button>

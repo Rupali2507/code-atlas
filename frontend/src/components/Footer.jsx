@@ -1,26 +1,35 @@
 import { Link } from 'react-router-dom'
+import assets from '../assets/assets'
 
 const Footer = () => {
   return (
-    <footer className="border-t border-slate-700/40 bg-[#0b1c30]">
-      <div className="mx-auto flex max-w-7xl items-center justify-center px-6 py-5 text-xs text-slate-500">
-        <span>© 2026 CodeAtlas</span>
+    <footer className="border-t border-slate-900 bg-black">
 
-        <span className="mx-2 text-slate-700">·</span>
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-7">
 
-        <span>Built for developers</span>
+        <Link to="/">
+          <img
+            src={assets.logo}
+            alt="CodeAtlas"
+            className="h-11 w-auto"
+          />
+        </Link>
 
-        <span className="mx-2 text-slate-700">·</span>
+        <p className="text-xs text-slate-700">
+          © {new Date().getFullYear()} CodeAtlas
+        </p>
 
         <a
           href="https://github.com/Rupali2507/code-atlas"
           target="_blank"
           rel="noreferrer"
-          className="transition hover:text-white"
+          className="text-xs text-slate-600 transition hover:text-white"
         >
           GitHub
         </a>
+
       </div>
+
     </footer>
   )
 }

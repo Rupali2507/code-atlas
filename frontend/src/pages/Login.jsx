@@ -36,7 +36,7 @@ const Login = () => {
 }
 
   return (
-    <div className="flex h-screen flex-col overflow-hidden bg-[#0b1c30] text-white">
+    <div className="flex h-screen flex-col overflow-hidden bg-[#03070d] text-white">
 
       {/* Navbar */}
       <Navbar />
@@ -47,28 +47,28 @@ const Login = () => {
         <div className="grid h-full lg:grid-cols-2">
 
           {/* Left Section */}
-          <div className="hidden border-r border-slate-700/50 p-10 lg:flex lg:flex-col">
+          <div className="hidden border-r border-slate-700/50 p-10 lg:flex lg:flex-col lg:items-center">
 
             {/* Center Content */}
             <div className="flex flex-1 items-center">
 
               <div className="max-w-lg">
 
-                <p className="mb-5 text-sm font-medium text-indigo-400">
+                <p className="mb-5 text-md font-medium text-indigo-400">
                   CODE INTELLIGENCE
                 </p>
 
-                <h1 className="text-4xl font-bold leading-[1.15] xl:text-5xl">
-                  Understand your
+                <h1 className="text-4xl font-bold leading-[1.15] xl:text-4xl">
+                  Understand your codebase.
 
                   <span className="block">
-                    codebase.
+                    
                   </span>
 
                   <span className="mt-2 block text-slate-400">
-                    Build with
+                    Build with  confidence.
                     <br />
-                    confidence.
+                   
                   </span>
                 </h1>
 
@@ -141,7 +141,7 @@ const Login = () => {
                     onChange={handleChange}
                     placeholder="you@example.com"
                     required
-                    className="w-full rounded-lg border border-slate-700 bg-[#081728] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400"
+                    className="w-full rounded-lg border border-slate-700 bg-gray px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400"
                   />
 
                 </div>
@@ -176,7 +176,7 @@ const Login = () => {
                     onChange={handleChange}
                     placeholder="Enter your password"
                     required
-                    className="w-full rounded-lg border border-slate-700 bg-[#081728] px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400"
+                    className="w-full rounded-lg border border-slate-700 bg-gray px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400"
                   />
 
                 </div>
@@ -185,7 +185,7 @@ const Login = () => {
                 {/* Sign In */}
                 <button
                   type="submit"
-                  className="w-full rounded-lg bg-indigo-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-indigo-600"
+                  className="w-full rounded-lg bg-white px-4 py-3 text-sm font-semibold text-black transition hover:bg-gray-300 cursor-pointer"
                 >
                   Sign in
                 </button>
@@ -210,7 +210,7 @@ const Login = () => {
               {/* GitHub */}
               <button
                 type="button"
-                className="flex w-full items-center justify-center rounded-lg border border-slate-700 bg-[#081728] px-4 py-3 text-sm font-medium text-slate-300 transition hover:border-slate-600 hover:text-white"
+                className="flex w-full items-center justify-center rounded-lg border border-slate-700 bg-gray-800 px-4 py-3 text-sm font-medium text-slate-300 transition hover:border-slate-600 hover:text-white"
               >
                 Continue with GitHub
               </button>
